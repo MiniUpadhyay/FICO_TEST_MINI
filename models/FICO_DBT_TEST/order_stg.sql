@@ -1,3 +1,8 @@
+/*
+    Welcome to your order_stg dbt model!
+*/
+
+
 {{
   config(
     materialized='incremental',
@@ -24,7 +29,7 @@ case
 end as order_channel,
 _fivetran_synced,
 current_timestamp as dbt_updated_at
-from raw_fico.fico_sch.ORDERS)
+from DATA_LAKE_FICO.RAW_SCH.ORDERS)
 select orderid,orderdate,customerid,employeeid,
 storeid,statuscd,statusdesc,
 order_channel,_fivetran_synced,dbt_updated_at from order_stg
