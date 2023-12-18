@@ -2,7 +2,6 @@
     Welcome to your order_stg dbt model!
 */
 
-
 {{
   config(
     materialized='incremental',
