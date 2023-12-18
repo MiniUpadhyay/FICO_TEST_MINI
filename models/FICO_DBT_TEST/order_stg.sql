@@ -1,10 +1,7 @@
 /*
     Welcome to your order_stg dbt model!
 */
-<<<<<<< HEAD
 
-=======
->>>>>>> 9a3407ac11b97b844af5f9c7c9da429f0175ddb8
 {{
   config(
     materialized='incremental',
