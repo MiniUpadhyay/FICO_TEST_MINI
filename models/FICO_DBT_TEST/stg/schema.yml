@@ -13,10 +13,3 @@ models:
         tests:
           - accepted_values:
               values: ['01', '02', '03']
-  - name: customerorders
-    description: "A starter dbt model"
-    columns:
-      - name: CUSTOMERID
-        description: "The primary key for this table"
-        tests:
-          - not_null

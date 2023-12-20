@@ -29,7 +29,7 @@ case
 end as order_channel,
 _fivetran_synced,
 current_timestamp as dbt_updated_at
-from DATA_LAKE_FICO.RAW_SCH.ORDERS)
+from {{ source('raw', 'orders') }})
 select orderid,orderdate,customerid,employeeid,
 storeid,statuscd,statusdesc,
 order_channel,_fivetran_synced,dbt_updated_at from order_stg
