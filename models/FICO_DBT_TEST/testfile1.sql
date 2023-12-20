@@ -1,3 +1,3 @@
-with testfile as (
+with testfile1 as (
     select * from  DATA_LAKE_FICO.RAW_SCH.ORDERS)
-select * from testfile
+select * from testfile1
