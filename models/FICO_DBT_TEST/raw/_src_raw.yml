@@ -5,7 +5,7 @@ sources:
     config:
       tags: ["nightly"]
     description: ""
-    database:  "{{ env_var('DBT_DATABASE') }}"
+    database:  DEV_FICO
     schema: RAW_SCH
     tables:
       - name: customers
