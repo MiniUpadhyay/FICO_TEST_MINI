@@ -36,15 +36,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  FICO_DBT_TEST:
-    # Applies to all files under models/example/
-    +database: "{{ env_var('DBT_DATABASE') }}"
-    raw:
-      +schema: raw
-      +materialized: 'table'
-    stg:
-      +schema: stg
-      +materialized: 'table'
-    views:
-      +schema: views
-      +materialized: 'view'
+  FICO_TEST_MINI:
+    FICO_DBT_TEST:
+      # Applies to all files under models/example/
+      +database: "{{ env_var('DBT_DATABASE') }}"
+      raw:
+        +schema: raw
+        +materialized: 'table'
+      stg:
+        +schema: stg
+        +materialized: 'table'
+      views:
+        +schema: views
+        +materialized: 'view'
