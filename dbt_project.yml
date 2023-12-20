@@ -46,6 +46,7 @@ models:
       stg:
         +schema: stg
         +materialized: 'table'
-      views:
-        +schema: views
-        +materialized: 'view'
+
+      marts:
+        +materialized: table
+        +schema: marts
