@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    config:
+      tags: ["nightly"]
+    description: ""
+    database:  "{{ env_var('DBT_DATABASE') }}"
+    schema: RAW_SCH
+    tables:
+      - name: customers
+        description: "customer data"
+      - name: orders
+        description: "order data"
