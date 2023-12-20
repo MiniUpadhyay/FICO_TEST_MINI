@@ -46,7 +46,8 @@ models:
       stg:
         +schema: stg
         +materialized: 'table'
-
-      marts:
-        +materialized: table
-        +schema: marts
+      views:
+        +schema: views
+        +materialized: 'view'
+seeds:
+  +database: "{{ env_var('DBT_DATABASE') }}"
