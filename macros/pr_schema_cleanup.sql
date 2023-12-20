@@ -13,6 +13,7 @@
         where
             catalog_name = '{{ database_to_clean | upper }}'
             and schema_name not in ('PUBLIC','INFORMATION_SCHEMA')
+            and schema_name ilike 'DBT_%'
             and last_altered <= (current_date() - interval '{{ age_in_days }} days')
     {% endset %}
 
