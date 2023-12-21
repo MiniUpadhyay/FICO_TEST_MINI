@@ -1,5 +1,5 @@
 /*
-    Welcome to your order_stg dbt model fir incremental approach!
+    Welcome to your order_stg dbt model for incremental approach!
 */
 {{
   config(
