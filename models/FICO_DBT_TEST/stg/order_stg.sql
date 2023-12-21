@@ -1,15 +1,6 @@
 /*
     Welcome to your order_stg dbt model!
 */
-
-
-{{
-  config(
-    materialized='incremental',
-    unique_key='ORDERID'
-  )
-}}
-
 with order_stg as (
 select orderid,
 orderdate,
