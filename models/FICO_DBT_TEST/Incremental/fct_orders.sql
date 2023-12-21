@@ -25,7 +25,7 @@ case
 end as order_channel,
 _fivetran_synced,
 current_timestamp as dbt_updated_at
-from {{ source('raw', 'orders') }})
+from {{ ref('order_stg') }} )
 select orderid,orderdate,customerid,employeeid,
 storeid,statuscd,statusdesc,
 order_channel,_fivetran_synced,dbt_updated_at from order_stg

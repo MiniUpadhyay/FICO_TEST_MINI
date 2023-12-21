@@ -40,14 +40,16 @@ models:
     FICO_DBT_TEST:
       # Applies to all files under models/example/
       +database: "{{ env_var('DBT_DATABASE') }}"
-      raw:
-        +schema: raw
+      landing:
+        +schema: landing
         +materialized: 'table'
-      stg:
-        +schema: stg
+      Incremental:
+        +schema: data_warehouse
         +materialized: 'incremental'
-      views:
-        +schema: views
-        +materialized: 'view'
+      marts:
+        +materialized: table
+        +schema: marts
+
+
 seeds:
   +database: "{{ env_var('DBT_DATABASE') }}"
