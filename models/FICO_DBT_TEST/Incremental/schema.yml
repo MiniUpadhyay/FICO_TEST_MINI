@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: order_stg
+  - name: fct_orders
     description: "A starter dbt model"
     columns:
       - name: orderid
