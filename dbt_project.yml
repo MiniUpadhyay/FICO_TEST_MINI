@@ -51,3 +51,4 @@ models:
         +materialized: 'view'
 seeds:
   +database: "{{ env_var('DBT_DATABASE') }}"
+
