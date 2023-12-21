@@ -45,7 +45,9 @@ models:
         +materialized: 'table'
       stg:
         +schema: stg
-        +materialized: 'table'
+        +materialized: 'incremental'
       views:
         +schema: views
         +materialized: 'view'
+seeds:
+  +database: "{{ env_var('DBT_DATABASE') }}"

@@ -1,0 +1,11 @@
+{% snapshot snap_dim_customer %}
+
+{{ config(
+    unique_key='CUSTOMERID',
+    strategy='check',
+    check_cols=['CUSTOMERID']
+) }}
+
+select * from {{ ref('dim_customer') }}
+
+{% endsnapshot %}
