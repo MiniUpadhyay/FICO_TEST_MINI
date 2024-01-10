@@ -46,9 +46,9 @@ models:
       Incremental:
         +schema: data_warehouse
         +materialized: 'incremental'
-      marts:
-        +materialized: table
-        +schema: marts
+      #marts:
+      #  +materialized: table
+      #  +schema: marts
 
 
 seeds:
