@@ -13,7 +13,7 @@ customerid,
 employeeid,
 storeid,
 status as statuscd,
-case 
+case
     when status = '01' then 'In Progress'
     when status = '02' then 'Completed'
     when status = '03' then 'Cancelled'
@@ -30,8 +30,11 @@ select orderid,orderdate,customerid,employeeid,
 storeid,statuscd,statusdesc,
 order_channel,_fivetran_synced,dbt_updated_at from order_stg
 
+
 {% if is_incremental() %}
 
+
   where _fivetran_synced >= (select max(dbt_updated_at) from {{ this }})
+
 
 {% endif %}

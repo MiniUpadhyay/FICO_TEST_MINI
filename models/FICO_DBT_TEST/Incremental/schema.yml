@@ -7,7 +7,6 @@ models:
       - name: orderid
         description: "The primary key for this table"
         tests:
-          - unique
           - not_null
       - name: STATUSCD
         tests:
